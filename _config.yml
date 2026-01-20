@@ -1,8 +1,8 @@
 # Manulife AI Research Site
 title: Manulife AI
 description: AI research and applied research embedded within business and technology functions.
-url: ""
-baseurl: ""
+url: "https://sabyasm.github.io"
+baseurl: "/manulife-ai-research"
 
 # Build settings
 markdown: kramdown
