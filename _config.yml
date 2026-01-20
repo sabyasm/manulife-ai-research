@@ -1,0 +1,49 @@
+# Manulife AI Research Site
+title: Manulife AI
+description: AI research and applied research embedded within business and technology functions.
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Collections
+collections:
+  domains:
+    output: true
+    permalink: /domains/:slug/
+  library:
+    output: true
+    permalink: /library/:year-:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "domains"
+    values:
+      layout: "domain"
+  - scope:
+      path: ""
+      type: "library"
+    values:
+      layout: "library_item"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - SECURITY.md
+  - plan.md
+  - node_modules
+  - vendor

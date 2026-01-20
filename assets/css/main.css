@@ -1,0 +1,472 @@
+/* ==========================================================================
+   Manulife AI - Design Tokens & Styles
+   ========================================================================== */
+
+/* Design Tokens (replace with official Manulife brand values) */
+:root {
+  /* Brand Colors */
+  --brand-primary: #00A758;      /* Manulife Green */
+  --brand-secondary: #003B5C;    /* Manulife Dark Blue */
+  --brand-accent: #00B8D4;       /* Accent Teal */
+  --brand-light: #E8F5E9;        /* Light Green Tint */
+  
+  /* Neutrals */
+  --color-text: #1A1A1A;
+  --color-text-muted: #666666;
+  --color-border: #E0E0E0;
+  --color-background: #FFFFFF;
+  --color-background-alt: #F5F5F5;
+  
+  /* Typography */
+  --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  
+  /* Sizing */
+  --container-max: 1200px;
+  --container-narrow: 800px;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--space-md);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--brand-secondary);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; margin-top: var(--space-xl); }
+h3 { font-size: 1.25rem; }
+
+p {
+  margin: 0 0 var(--space-md);
+}
+
+a {
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin: 0 0 var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+li {
+  margin-bottom: var(--space-xs);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  background-color: var(--brand-secondary);
+  padding: var(--space-md) 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-background);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--brand-primary);
+  color: var(--color-background);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--space-lg);
+}
+
+.site-nav a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  padding: var(--space-xs) 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--color-background);
+  border-bottom-color: var(--brand-primary);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  margin-top: var(--space-2xl);
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+main.container {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+.card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+.card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
+}
+
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Domain Pages
+   ========================================================================== */
+
+.domain-header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.domain-blurb {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+.domain-contact {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.domain-library,
+.domain-collaborations {
+  margin-top: var(--space-xl);
+}
+
+/* ==========================================================================
+   Library
+   ========================================================================== */
+
+.library-list {
+  list-style: none;
+  padding: 0;
+}
+
+.library-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.library-year {
+  font-weight: 600;
+  color: var(--brand-primary);
+  min-width: 3rem;
+}
+
+.library-type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  background: var(--color-background-alt);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+.library-venue {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.library-header {
+  margin-bottom: var(--space-lg);
+}
+
+.library-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.library-org {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.library-summary {
+  font-size: 1.1rem;
+  border-left: 3px solid var(--brand-primary);
+  padding-left: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.library-links {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.library-domains {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.library-domains ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Collaborations
+   ========================================================================== */
+
+.collab-list {
+  list-style: none;
+  padding: 0;
+}
+
+.collab-item {
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.collab-item strong {
+  color: var(--brand-secondary);
+}
+
+.collab-type,
+.collab-years {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-left: var(--space-sm);
+}
+
+.collab-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-sm);
+}
+
+/* ==========================================================================
+   Open Source
+   ========================================================================== */
+
+.oss-card {
+  border-left: 3px solid var(--brand-primary);
+}
+
+.oss-status {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+.oss-status.maintained { background: var(--brand-light); color: var(--brand-primary); }
+.oss-status.active { background: #E3F2FD; color: #1565C0; }
+.oss-status.archived { background: var(--color-background-alt); color: var(--color-text-muted); }
+
+.oss-meta {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: var(--color-background);
+}
+
+.btn-primary:hover {
+  background-color: #008A47;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Callouts (Responsible AI section)
+   ========================================================================== */
+
+.callout {
+  background: var(--color-background-alt);
+  border-left: 3px solid var(--brand-secondary);
+  padding: var(--space-lg);
+  margin: var(--space-lg) 0;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.callout h3 {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .site-nav ul {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  
+  .library-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

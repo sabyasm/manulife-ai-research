@@ -1,0 +1,22 @@
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="{{ '/' | relative_url }}" class="site-logo">
+            <span class="logo-mark">M</span>
+            <span class="logo-text">{{ site.title }}</span>
+        </a>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ '/' | relative_url }}" {% if page.url=='/' %}class="active" {% endif %}>Overview</a>
+                </li>
+                <li><a href="{{ '/domains/' | relative_url }}" {% if page.url contains '/domains' %}class="active" {%
+                        endif %}>Embedded Domains</a></li>
+                <li><a href="{{ '/collaborations/' | relative_url }}" {% if page.url contains '/collaborations'
+                        %}class="active" {% endif %}>Collaborations</a></li>
+                <li><a href="{{ '/open-source/' | relative_url }}" {% if page.url contains '/open-source'
+                        %}class="active" {% endif %}>Open Source</a></li>
+                <li><a href="{{ '/library/' | relative_url }}" {% if page.url contains '/library' %}class="active" {%
+                        endif %}>Library</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

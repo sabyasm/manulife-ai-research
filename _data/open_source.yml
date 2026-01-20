@@ -1,0 +1,32 @@
+# Open Source Projects
+
+- name: manulife-mlops-toolkit
+  repo_url: https://github.com/manulife/mlops-toolkit
+  status: maintained
+  team_owner: AI Platforms
+  license: Apache-2.0
+  last_release: "2025-01"
+  description: >
+    Internal MLOps utilities for model training, validation, and deployment
+    pipelines. Includes integrations with common cloud providers and 
+    monitoring frameworks.
+
+- name: claims-text-classifier
+  repo_url: https://github.com/manulife/claims-text-classifier
+  status: active
+  team_owner: Claims AI
+  license: MIT
+  last_release: "2024-11"
+  description: >
+    Text classification models for insurance claims processing.
+    Pre-trained models and fine-tuning scripts for domain adaptation.
+
+- name: risk-assessment-datasets
+  repo_url: https://github.com/manulife/risk-assessment-datasets
+  status: archived
+  team_owner: Underwriting AI
+  license: CC-BY-4.0
+  last_release: "2023-06"
+  description: >
+    Anonymized, synthetic datasets for benchmarking risk assessment models.
+    Useful for academic research and model development.

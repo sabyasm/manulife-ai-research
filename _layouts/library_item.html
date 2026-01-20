@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="library-entry">
+    <header class="library-header">
+        <h1>{{ page.title }}</h1>
+        <div class="library-meta">
+            <span class="library-year">{{ page.year }}</span>
+            <span class="library-type">{{ page.type }}</span>
+            {% if page.venue %}<span class="library-venue">{{ page.venue }}</span>{% endif %}
+        </div>
+        <p class="library-org">{{ page.org_unit }}</p>
+    </header>
+
+    {% if page.summary %}
+    <p class="library-summary">{{ page.summary }}</p>
+    {% endif %}
+
+    <section class="library-content">
+        {{ content }}
+    </section>
+
+    <footer class="library-links">
+        {% if page.external_url %}
+        <a href="{{ page.external_url }}" class="btn btn-primary" target="_blank" rel="noopener">View Publication</a>
+        {% endif %}
+        {% if page.pdf_url %}
+        <a href="{{ page.pdf_url }}" class="btn btn-secondary" target="_blank" rel="noopener">PDF</a>
+        {% endif %}
+        {% if page.code_url %}
+        <a href="{{ page.code_url }}" class="btn btn-secondary" target="_blank" rel="noopener">Code</a>
+        {% endif %}
+    </footer>
+
+    {% if page.domains %}
+    <aside class="library-domains">
+        <h3>Related Domains</h3>
+        <ul>
+            {% for domain_slug in page.domains %}
+            {% assign domain = site.domains | where: "slug", domain_slug | first %}
+            {% if domain %}
+            <li><a href="{{ domain.url | relative_url }}">{{ domain.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </aside>
+    {% endif %}
+</article>

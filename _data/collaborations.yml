@@ -1,0 +1,46 @@
+# Academic and Industry Collaborations
+
+- domain: underwriting
+  partner: University of Toronto
+  type: academic
+  years: "2024–2026"
+  area: Machine learning for risk assessment and automated underwriting decision support
+  links:
+    - label: Partnership Announcement
+      url: https://example.com/uoft-manulife-partnership
+
+- domain: underwriting
+  partner: Vector Institute
+  type: academic
+  years: "2023–2025"
+  area: Applied research in deep learning for insurance applications
+  links:
+    - label: Vector Institute Partners
+      url: https://vectorinstitute.ai/partners/
+
+- domain: fraud
+  partner: MIT CSAIL
+  type: academic
+  years: "2024–2026"
+  area: Anomaly detection and graph-based fraud pattern identification
+  links:
+    - label: Research Collaboration Page
+      url: https://example.com/mit-manulife-collaboration
+
+- domain: fraud
+  partner: Waterloo AI Institute
+  type: academic
+  years: "2023–2025"
+  area: Real-time transaction monitoring and behavioral analysis
+  links:
+    - label: Partnership Details
+      url: https://example.com/waterloo-manulife
+
+- domain: platforms
+  partner: Google Cloud
+  type: industry
+  years: "2024–2026"
+  area: MLOps infrastructure and scalable model serving
+  links:
+    - label: Customer Story
+      url: https://example.com/gcp-manulife

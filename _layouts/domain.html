@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<article class="domain-page">
+    <header class="domain-header">
+        <h1>{{ page.title }}</h1>
+        <p class="domain-blurb">{{ page.blurb }}</p>
+        {% if page.contact %}<p class="domain-contact">Contact: {{ page.contact }}</p>{% endif %}
+    </header>
+
+    <section class="domain-content">
+        {{ content }}
+    </section>
+
+    {% assign domain_items = site.library | where_exp: "item", "item.domains contains page.slug" | sort: "year" |
+    reverse %}
+    {% if domain_items.size > 0 %}
+    <section class="domain-library">
+        <h2>Related Publications & Artifacts</h2>
+        <ul class="library-list">
+            {% for item in domain_items %}
+            <li class="library-item">
+                <span class="library-year">{{ item.year }}</span>
+                <a href="{{ item.external_url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+                <span class="library-type">{{ item.type }}</span>
+                {% if item.venue %}<span class="library-venue">{{ item.venue }}</span>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+    {% assign domain_collabs = site.data.collaborations | where: "domain", page.slug %}
+    {% if domain_collabs.size > 0 %}
+    <section class="domain-collaborations">
+        <h2>Collaborations</h2>
+        <ul class="collab-list">
+            {% for collab in domain_collabs %}
+            <li class="collab-item">
+                <strong>{{ collab.partner }}</strong>
+                <span class="collab-type">{{ collab.type }}</span>
+                <span class="collab-years">{{ collab.years }}</span>
+                <p>{{ collab.area }}</p>
+                {% if collab.links %}
+                <ul class="collab-links">
+                    {% for link in collab.links %}
+                    <li><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+</article>
