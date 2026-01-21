@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-# Manulife AI
+# Manulife AI Research
 
 AI research and applied research are embedded within our business and technology functions. We focus on practical applications that improve outcomes for our customers and operations.
 

@@ -1,7 +1,7 @@
 <header class="site-header">
     <div class="container header-inner">
         <a href="{{ '/' | relative_url }}" class="site-logo">
-            <span class="logo-mark">M</span>
+            <img src="{{ site.logo }}" alt="{{ site.title }}" class="logo-image" onerror="this.style.display='none'">
             <span class="logo-text">{{ site.title }}</span>
         </a>
         <nav class="site-nav">

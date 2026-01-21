@@ -1,8 +1,12 @@
 # Manulife AI Research Site
-title: Manulife AI
+title: Manulife AI Research
 description: AI research and applied research embedded within business and technology functions.
 url: "https://sabyasm.github.io"
 baseurl: "/manulife-ai-research"
+
+# Branding
+logo: "https://www.manulife.ca/content/dam/consumer-portal/logo/en/manulife-home-100.svg"
+favicon: "https://www.manulife.ca/etc/designs/manulife-global/favicon.png"
 
 # Build settings
 markdown: kramdown

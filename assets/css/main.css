@@ -294,6 +294,17 @@ b {
   font-weight: var(--cds-font-weight-bold);
 }
 
+.logo-image {
+  height: 2rem;
+  width: auto;
+}
+
+.logo-text {
+  font-size: var(--cds-font-size-lg);
+  font-weight: var(--cds-font-weight-demibold);
+  color: var(--cds-color-neutral-light-light-3);
+}
+
 .site-nav ul {
   display: flex;
   list-style: none;
